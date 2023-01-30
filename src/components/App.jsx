@@ -58,12 +58,13 @@ export const App = () => {
 
 
 
-
+console.log(images.length);
   return (
     <>
       <Searchbar onSubmit={handleSubmit} />
-      <ImageGallery images={images} />
-      <div>{renderButtonOrLoader()}</div>
+      <ImageGallery images={images} />{
+images.length < totalImages  &&
+      <div>{renderButtonOrLoader()}</div>}
     </>
   );
 };
